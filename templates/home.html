@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 3rem;
+            color: #333;
+        }
+
+        a {
+            display: block;
+            margin: 15px auto;
+            font-size: 1.2rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the School Management System</h1>
+        <a href="{% url 'student_list' %}">Students</a>
+        <a href="{% url 'course_list' %}">Courses</a>
+        <a href="{% url 'teacher_list' %}">Teachers</a>
+        <a href="{% url 'attendance_list' %}">Attendance</a>
+    </div>
+</body>
+</html>

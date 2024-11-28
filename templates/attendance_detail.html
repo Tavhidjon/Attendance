@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Detail</title>
+    <style>
+        /* Styles similar to other detail pages */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Detail</h1>
+        <p><strong>Student:</strong> {{ attendance.student_id.first_name }} {{ attendance.student_id.last_name }}</p>
+        <p><strong>Time In:</strong> {{ attendance.omad }}</p>
+        <p><strong>Time Out:</strong> {{ attendance.raft }}</p>
+        <p><strong>Notes:</strong> {{ attendance.notes }}</p>
+        <a href="{% url 'attendance_list' %}" class="back-button">Back to List</a>
+    </div>
+</body>
+</html>
